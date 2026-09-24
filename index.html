@@ -13,9 +13,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="scroll-background" aria-hidden="true">
+    <div class="scroll-lines scroll-lines-a"></div>
+    <div class="scroll-lines scroll-lines-b"></div>
+    <div class="scroll-glow scroll-glow-a"></div>
+    <div class="scroll-glow scroll-glow-b"></div>
+  </div>
   <div class="noise" aria-hidden="true"></div>
   <header class="header">
-    <a class="brand" href="#inicio">DM<span>.</span></a>
+    <a class="brand" href="#inicio"><img src="dm-logo-final.png" alt="DM" class="brand-logo-final"></a>
     <nav class="nav" aria-label="Navegación principal">
       <a href="#servicios">Servicios</a><a href="#autoadministrable">Autoadministrable</a><a href="#proyectos">Proyectos</a><a href="#proceso">Proceso</a><a href="#contacto">Contacto</a>
     </nav>
@@ -52,12 +58,29 @@
     <section class="section self-manage" id="autoadministrable">
       <div class="section-head"><span>02 / AUTOGESTIÓN</span><h2>Tu web, sin depender<br>de un programador.</h2></div>
       <div class="self-grid">
-        <div class="sheet-demo">
-          <div class="sheet-top"><span></span><strong>Productos · Google Sheets</strong></div>
-          <div class="sheet-row head"><i>Producto</i><i>Precio</i><i>Stock</i></div>
-          <div class="sheet-row"><i>PLA Silk</i><i>$18.900</i><i>15</i></div>
-          <div class="sheet-row"><i>PETG</i><i>$16.900</i><i>12</i></div>
-          <div class="sheet-row"><i>Impresora 3D</i><i>$320.000</i><i>5</i></div>
+        <div class="autogestion-demo">
+          <div class="demo-label">ASÍ FUNCIONA</div>
+          <div class="flow-card">
+            <div class="mini-sheet">
+              <div class="mini-sheet-title"><span class="sheet-icon"></span><strong>Tu planilla</strong><small>Google Sheets</small></div>
+              <div class="mini-row mini-head"><span>Producto</span><span>Precio</span><span>Stock</span></div>
+              <div class="mini-row"><span>PLA Silk</span><span>$18.900</span><span>15</span></div>
+              <div class="mini-row"><span>PETG</span><span>$16.900</span><span>12</span></div>
+              <div class="mini-row"><span>Impresora 3D</span><span>$320.000</span><span>5</span></div>
+            </div>
+            <div class="sync-arrow"><b>→</b><small>SE ACTUALIZA</small></div>
+            <div class="mini-site">
+              <div class="site-bar"><span>DM</span><i></i><i></i></div>
+              <div class="site-product">
+                <div class="product-shape"></div>
+                <small>FILAMENTO</small>
+                <strong>PLA Silk</strong>
+                <b>$18.900</b>
+                <em>Stock: 15</em>
+              </div>
+            </div>
+          </div>
+          <p class="demo-caption">Editás una celda en tu planilla y el nuevo dato aparece en tu sitio.</p>
         </div>
         <div class="self-copy">
           <span class="kicker">GOOGLE SHEETS + TU SITIO</span>
@@ -79,7 +102,7 @@
         <div class="project-info">
           <div class="tags"><span>E-COMMERCE</span><span>2026</span></div>
           <h3>Itálica 3D</h3>
-          <p>Tienda online para un emprendimiento de impresión 3D. El proyecto combina una identidad visual moderna con un catálogo administrable y un proceso de compra simple.</p>
+          <p>Tienda online de impresión 3D con catálogo autoadministrable, experiencia responsive y pedidos simples por WhatsApp.</p>
           <ul><li>Catálogo dinámico y categorías</li><li>Filtros y fichas individuales de producto</li><li>Carrito y checkout por WhatsApp</li><li>Administración mediante Google Sheets</li><li>Diseño responsive</li><li>SEO técnico y publicación web</li></ul>
           <a href="https://italica3d.com.ar/" target="_blank" rel="noopener">Visitar proyecto ↗</a>
         </div>
@@ -133,7 +156,7 @@
     </section>
   </main>
 
-  <footer><a class="brand" href="#inicio">DM<span>.</span></a><p>© <span id="year"></span> Damián Marchesin · Desarrollador Web Freelance</p><a href="#inicio">Volver arriba ↑</a></footer>
+  <footer><a class="brand" href="#inicio"><img src="dm-logo-final.png" alt="DM" class="brand-logo-final"></a><p>© <span id="year"></span> Damián Marchesin · Desarrollador Web Freelance</p><a href="#inicio">Volver arriba ↑</a></footer>
   <script src="script.js"></script>
 </body>
 </html>
