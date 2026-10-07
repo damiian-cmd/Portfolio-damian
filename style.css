@@ -779,3 +779,105 @@ body::before,body::after{display:none!important}
     filter:none!important;
   }
 }
+
+
+/* ===== PORTFOLIO: múltiples proyectos ===== */
+.projects-list{display:grid;gap:92px}
+.projects-list .project-card{padding-bottom:72px;border-bottom:1px solid var(--line)}
+.projects-list .project-card:last-child{padding-bottom:0;border-bottom:0}
+.project-preview{aspect-ratio:16/10;position:relative}
+.project-preview iframe{display:block;width:100%;height:100%;border:0;border-radius:14px;background:#fff}
+@media(max-width:1050px){.projects-list{gap:68px}.projects-list .project-card{padding-bottom:56px}}
+@media(max-width:580px){.projects-list{gap:54px}.projects-list .project-card{padding-bottom:44px}.project-preview{aspect-ratio:4/3}}
+
+/* ===== FIX PROYECTOS — 3 casos con presencia uniforme ===== */
+.project-section .section-head{margin-bottom:64px}
+.projects-list{display:grid;gap:72px}
+.projects-list .project-card{
+  grid-template-columns:minmax(0,1.05fr) minmax(360px,.75fr);
+  gap:58px;
+  align-items:center;
+  padding:0 0 72px;
+  border-bottom:1px solid var(--line);
+}
+.projects-list .project-card:last-child{padding-bottom:0;border-bottom:0}
+.projects-list .real-cover{
+  width:100%;
+  max-width:none;
+  justify-self:stretch;
+  transform:none!important;
+}
+.projects-list .project-preview{
+  width:100%;
+  aspect-ratio:16/10;
+  min-height:0;
+  overflow:hidden;
+}
+.projects-list .project-preview iframe{
+  display:block;
+  width:100%;
+  height:100%;
+  border:0;
+  border-radius:14px;
+  background:#fff;
+  pointer-events:none;
+}
+.projects-list .project-info{max-width:470px}
+
+@media(max-width:1050px){
+  .project-section .section-head{margin-bottom:44px}
+  .projects-list{gap:58px}
+  .projects-list .project-card{grid-template-columns:1fr;gap:26px;padding-bottom:58px}
+  .projects-list .project-info{max-width:760px}
+}
+@media(max-width:580px){
+  .projects-list{gap:46px}
+  .projects-list .project-card{padding-bottom:46px}
+  .projects-list .project-preview{aspect-ratio:16/11}
+}
+
+
+/* ===== MOCKUPS REALES DE PROYECTOS ===== */
+.device-real{
+  padding:22px 22px 34px!important;
+  overflow:visible!important;
+  background:linear-gradient(145deg,rgba(255,255,255,.82),rgba(238,241,245,.68))!important;
+  position:relative;
+}
+.device-real .device-screen{
+  position:relative;
+  overflow:hidden;
+  border:10px solid #17191d;
+  border-bottom-width:14px;
+  border-radius:16px 16px 10px 10px;
+  background:#111;
+  box-shadow:0 22px 45px rgba(20,25,32,.18);
+  aspect-ratio:16/9;
+}
+.device-real .device-screen:before{
+  content:"";
+  position:absolute;
+  top:4px;left:50%;transform:translateX(-50%);
+  width:5px;height:5px;border-radius:50%;background:#3b3d41;
+  z-index:2;
+}
+.device-real .device-screen img{
+  width:100%;height:100%;display:block;object-fit:cover;object-position:center top;
+  border-radius:5px;
+}
+.device-real .device-base{
+  position:absolute;
+  left:9%;right:9%;bottom:13px;height:13px;
+  border-radius:2px 2px 12px 12px;
+  background:linear-gradient(180deg,#d7d9dc,#aeb2b7);
+  box-shadow:0 8px 15px rgba(20,25,32,.13);
+}
+.device-real .device-base:after{
+  content:"";position:absolute;left:42%;right:42%;top:0;height:4px;
+  border-radius:0 0 7px 7px;background:#92969b;
+}
+@media(max-width:700px){
+  .device-real{padding:13px 13px 25px!important}
+  .device-real .device-screen{border-width:7px;border-bottom-width:10px;border-radius:11px 11px 7px 7px}
+  .device-real .device-base{bottom:8px;height:10px}
+}
