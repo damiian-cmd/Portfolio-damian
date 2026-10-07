@@ -90,7 +90,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',
   }, {passive:true});
 
   // Elementos grandes con parallax sutil
-  document.querySelectorAll('.real-cover,.autogestion-demo,.maintenance-card').forEach(el => {
+  document.querySelectorAll('.autogestion-demo,.maintenance-card').forEach(el => {
     el.classList.add('parallax-soft');
   });
 

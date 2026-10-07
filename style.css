@@ -881,3 +881,49 @@ body::before,body::after{display:none!important}
   .device-real .device-screen{border-width:7px;border-bottom-width:10px;border-radius:11px 11px 7px 7px}
   .device-real .device-base{bottom:8px;height:10px}
 }
+
+/* ===== FIX FINAL: proyectos sin superposición ===== */
+.project-section{
+  overflow:visible;
+}
+.project-section .section-head{
+  position:relative;
+  z-index:2;
+  margin-bottom:0!important;
+  padding-bottom:72px;
+}
+.project-section .projects-list{
+  position:relative;
+  z-index:1;
+  margin-top:0;
+  gap:88px;
+}
+.projects-list .project-card{
+  position:relative;
+  transform:none!important;
+  filter:none!important;
+  padding-bottom:88px;
+  align-items:center;
+}
+.projects-list .project-visual,
+.projects-list .real-cover,
+.projects-list .device-real{
+  position:relative;
+  transform:none!important;
+  margin:0!important;
+}
+.projects-list .project-info{
+  position:relative;
+  z-index:2;
+  align-self:center;
+}
+@media(max-width:1050px){
+  .project-section .section-head{padding-bottom:48px}
+  .project-section .projects-list{gap:64px}
+  .projects-list .project-card{padding-bottom:64px}
+}
+@media(max-width:580px){
+  .project-section .section-head{padding-bottom:36px}
+  .project-section .projects-list{gap:50px}
+  .projects-list .project-card{padding-bottom:50px}
+}
